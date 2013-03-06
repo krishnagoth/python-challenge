@@ -4,12 +4,12 @@ Created on 28.02.2013
 @author: Vladimir
 '''
 
-from PIL import Image
-from PIL import ImageDraw
+import Image
+import ImageDraw
 
 size = 100
 
-img_f = Image.open("data\\p14\\wire.png", 'r')
+img_f = Image.open("..\\data\\p14\\wire.png", 'r')
 in_pix = img_f.load()
 out_im = Image.new("RGB", (size, size), (255, 255, 255, 255))
 

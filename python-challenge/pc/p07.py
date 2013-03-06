@@ -5,8 +5,11 @@ Created on 26.02.2013
 '''
 
 import Image
+import os
 
-im = Image.open("testdata\\oxygen.png")
+print os.getcwd()
+
+im = Image.open("..\\data\\oxygen.png")
 pix = im.load()
 s = ''
 for hor in range(3, im.size[0], 7):
