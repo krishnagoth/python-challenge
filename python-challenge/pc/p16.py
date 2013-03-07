@@ -12,17 +12,25 @@ w = 640
 
 img_f = Image.open("..\\data\\p16\\mozart.gif", 'r')
 in_pix = img_f.load()
-out_im = Image.new("RGB", (w * 2, h), (255, 255, 255, 255))
+
+print img_f
+
+out_im = Image.new("P", (w * 2, h), (255))
 
 prev_p = 0
+shift = 0
+
 
 for j in range(h):
+    
+    parr = []
     for i in range(w):
     
-        p = in_pix[(i, 0)]
+        p = in_pix[(i, j)]
         if p == 195:
-            pp = in_pix.index(p)
-            for hor in range(w):
-                out_im.putpixel((hor + 640 - pp[0], pp[1]), p)
+            shift = 640 - i
+        parr.append(p)
+    for hor in range(w):
+        out_im.putpixel((hor + shift, j), parr[hor])
        
 out_im.show()
