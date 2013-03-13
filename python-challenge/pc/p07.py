@@ -4,7 +4,7 @@ Created on 26.02.2013
 @author: v.vlasov
 '''
 
-import Image
+from PIL import Image
 import os
 
 print os.getcwd()

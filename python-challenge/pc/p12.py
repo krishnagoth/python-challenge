@@ -11,7 +11,7 @@ filearr = []
 strarr = []
 
 for n in range(num):
-    filearr.append(open("data\\p11\\out" + str(n), 'wb'))
+    filearr.append(open("data\\p12\\out" + str(n), 'wb'))
     strarr.append('')
 
 file_ctr = -1
